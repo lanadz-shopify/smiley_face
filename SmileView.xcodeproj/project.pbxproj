@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F3CE943B1D10DF05009013AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE943A1D10DF05009013AD /* AppDelegate.swift */; };
-		F3CE943D1D10DF05009013AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE943C1D10DF05009013AD /* ViewController.swift */; };
+		F3CE943D1D10DF05009013AD /* SmileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE943C1D10DF05009013AD /* SmileViewController.swift */; };
 		F3CE94401D10DF05009013AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CE943E1D10DF05009013AD /* Main.storyboard */; };
 		F3CE94421D10DF05009013AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CE94411D10DF05009013AD /* Assets.xcassets */; };
 		F3CE94451D10DF05009013AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CE94431D10DF05009013AD /* LaunchScreen.storyboard */; };
+		F3CE944D1D110762009013AD /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE944C1D110762009013AD /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3CE94371D10DF05009013AD /* SmileView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE943A1D10DF05009013AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3CE943C1D10DF05009013AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3CE943C1D10DF05009013AD /* SmileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileViewController.swift; sourceTree = "<group>"; };
 		F3CE943F1D10DF05009013AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3CE94411D10DF05009013AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3CE94441D10DF05009013AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3CE94461D10DF05009013AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3CE944C1D110762009013AD /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				F3CE943A1D10DF05009013AD /* AppDelegate.swift */,
-				F3CE943C1D10DF05009013AD /* ViewController.swift */,
+				F3CE943C1D10DF05009013AD /* SmileViewController.swift */,
 				F3CE943E1D10DF05009013AD /* Main.storyboard */,
 				F3CE94411D10DF05009013AD /* Assets.xcassets */,
 				F3CE94431D10DF05009013AD /* LaunchScreen.storyboard */,
 				F3CE94461D10DF05009013AD /* Info.plist */,
+				F3CE944C1D110762009013AD /* FaceView.swift */,
 			);
 			path = SmileView;
 			sourceTree = "<group>";
@@ -136,8 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3CE943D1D10DF05009013AD /* ViewController.swift in Sources */,
+				F3CE943D1D10DF05009013AD /* SmileViewController.swift in Sources */,
 				F3CE943B1D10DF05009013AD /* AppDelegate.swift in Sources */,
+				F3CE944D1D110762009013AD /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
