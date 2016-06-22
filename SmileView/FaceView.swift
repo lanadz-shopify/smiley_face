@@ -11,7 +11,7 @@ import UIKit
 class FaceView: UIView {
     let scale: CGFloat = 0.9
     let lineWidth: CGFloat = 5.0
-    let mouthCurvature = 1.0 // 0 - flat, 1.0 full smile, -1.0 full frown
+    var mouthCurvature = 1.0 // 0 - flat, 1.0 full smile, -1.0 full frown
 
     private var skullRadius: CGFloat {
         return min(bounds.size.height, bounds.size.width) / 2 * scale

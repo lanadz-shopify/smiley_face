@@ -10,16 +10,12 @@ import UIKit
 
 class SmileViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var faceView: FaceView!
+    @IBAction func changeEmotionButton() {
+        let randMult = arc4random_uniform(19)
+        faceView.mouthCurvature = (Double(randMult) - 10) * 0.1
+
+        faceView.setNeedsDisplay()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

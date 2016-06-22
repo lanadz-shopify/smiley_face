@@ -17,23 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-ms-2c6" customClass="FaceView" customModule="SmileView" customModuleProvider="target">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i6G-tA-05p">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <subviews>
+                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-ms-2c6" customClass="FaceView" customModule="SmileView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
+                                        <color key="backgroundColor" red="0.6786770224571228" green="0.92798048257827759" blue="0.82981467247009277" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfR-mI-ASr">
+                                        <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="changeEmotionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNA-Fz-uI4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TfR-mI-ASr" firstAttribute="top" secondItem="jMu-ms-2c6" secondAttribute="bottom" constant="10" id="CSI-vc-vqQ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jMu-ms-2c6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H9L-ew-vld"/>
-                            <constraint firstItem="jMu-ms-2c6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LN6-FC-MZY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jMu-ms-2c6" secondAttribute="bottom" id="P55-kY-Mwr"/>
-                            <constraint firstAttribute="trailing" secondItem="jMu-ms-2c6" secondAttribute="trailing" id="nIA-Jv-72v"/>
+                            <constraint firstItem="i6G-tA-05p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8dA-KC-Rqp"/>
+                            <constraint firstItem="i6G-tA-05p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="FUi-Yz-E6C"/>
+                            <constraint firstItem="i6G-tA-05p" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="MHL-Y0-Wia"/>
+                            <constraint firstItem="i6G-tA-05p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="biP-Uu-XGu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="jMu-ms-2c6" id="4ZV-BF-zIK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="315" y="378"/>
+            <point key="canvasLocation" x="307" y="382"/>
         </scene>
     </scenes>
 </document>
