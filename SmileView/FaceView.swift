@@ -58,12 +58,16 @@ class FaceView: UIView {
     }
 
     private func pathForEye(eye: Eye) -> UIBezierPath {
+        UIColor.blueColor().set()
         let eyeRadius = skullRadius / Ratios.SkullRadiusToEyeRadius
         let eyeCenter = getEyeCenter(eye)
+        let path = pathForCircleCeneteredAtPoint(eyeCenter, withRadius: eyeRadius)
+        path.fill()
         return pathForCircleCeneteredAtPoint(eyeCenter, withRadius: eyeRadius)
     }
 
     private func pathForMouth() -> UIBezierPath {
+        UIColor.redColor().set()
         let mouthWidth = skullRadius / Ratios.SkullRadiusToMouthWidth
         let mouthHeight = skullRadius / Ratios.SkullRadiusToMouthHeight
         let mouthOffset = skullRadius / Ratios.SkullRadiusToMouthOffset
@@ -90,7 +94,7 @@ class FaceView: UIView {
     }
 
     override func drawRect(rect: CGRect) {
-        UIColor.blueColor().set()
+        UIColor.blackColor().set()
         pathForCircleCeneteredAtPoint(skullCenter, withRadius: skullRadius).stroke()
         pathForEye(Eye.Left).stroke()
         pathForEye(Eye.Right).stroke()

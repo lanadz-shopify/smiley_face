@@ -17,5 +17,15 @@ class SmileViewController: UIViewController {
 
         faceView.setNeedsDisplay()
     }
+
+    @IBAction func setSad() {
+        faceView.mouthCurvature = -1.0
+        faceView.setNeedsDisplay()
+    }
+
+    @IBAction func setHappy() {
+        faceView.mouthCurvature = 1.0
+        faceView.setNeedsDisplay()
+    }
 }
 
