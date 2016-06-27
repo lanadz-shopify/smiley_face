@@ -29,8 +29,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfR-mI-ASr">
                                         <rect key="frame" x="200" y="0.0" width="200" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="random"/>
                                         <connections>
                                             <action selector="changeEmotionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNA-Fz-uI4"/>
@@ -48,6 +46,21 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-ms-2c6" customClass="FaceView" customModule="SmileView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
                                 <color key="backgroundColor" red="0.6786770224571228" green="0.92798048257827759" blue="0.82981467247009277" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="mouthCurvature">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="0.90000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="eyeOpen" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="eyeBrowTilt">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
