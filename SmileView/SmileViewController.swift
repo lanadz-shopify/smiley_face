@@ -9,26 +9,24 @@
 import UIKit
 
 class SmileViewController: UIViewController {
-
-    @IBOutlet weak var faceView: FaceView!
-    @IBAction func changeEmotionButton() {
-        let randMult = arc4random_uniform(19)
-        let modif = CGFloat((Double(randMult) - 10) * 0.1)
-        faceView.mouthCurvature = modif
-        faceView.eyeBrowTilt = modif
-        faceView.setNeedsDisplay()
+    var expression = FacialExpression(eyes: .Closed, brows: .Relaxed, mouth: .Neutral) {
+        didSet { updateUI() }
     }
 
-    @IBAction func setSad() {
-        faceView.mouthCurvature = -1.0
-        faceView.eyeBrowTilt = -1.0
-        faceView.setNeedsDisplay()
+    @IBOutlet weak var faceView: FaceView! { didSet { updateUI() } }
+
+    private func updateUI() {
+        switch expression.eyes {
+        case .Open: faceView.eyeOpen = true
+        case .Closed: faceView.eyeOpen = false
+        case .Squinting: faceView.eyeOpen = false
+        }
+
+        faceView.mouthCurvature = CGFloat(mouthCurvatures[expression.mouth] ?? 0.0 )
+        faceView.eyeBrowTilt = CGFloat(browTilts[expression.brows] ?? 0.5)
     }
 
-    @IBAction func setHappy() {
-        faceView.mouthCurvature = 1.0
-        faceView.eyeBrowTilt = 1.0
-        faceView.setNeedsDisplay()
-    }
+    private let mouthCurvatures = [ FacialExpression.Mouth.Frown: -1.0, .Grin: 0.5, .Smile: 1, .Smirk: -0.5 ]
+    private let browTilts = [ FacialExpression.EyeBrows.Furrowed: -1.0, .Normal: 0.0, .Relaxed: 0.5 ]
 }
 

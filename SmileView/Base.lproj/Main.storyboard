@@ -17,48 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="blm-Ae-smQ">
-                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALN-zq-hIw">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
-                                        <state key="normal" title="happy"/>
-                                        <connections>
-                                            <action selector="setHappy" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5Q-L5-Rc2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfR-mI-ASr">
-                                        <rect key="frame" x="200" y="0.0" width="200" height="30"/>
-                                        <state key="normal" title="random"/>
-                                        <connections>
-                                            <action selector="changeEmotionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNA-Fz-uI4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nt4-3c-Dlg">
-                                        <rect key="frame" x="400" y="0.0" width="200" height="30"/>
-                                        <state key="normal" title="sad"/>
-                                        <connections>
-                                            <action selector="setSad" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJU-C3-eij"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-ms-2c6" customClass="FaceView" customModule="SmileView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" red="0.6786770224571228" green="0.92798048257827759" blue="0.82981467247009277" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="mouthCurvature">
-                                        <real key="value" value="-1"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="scale">
                                         <real key="value" value="0.90000000000000002"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="eyeOpen" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="eyeBrowTilt">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -66,12 +40,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jMu-ms-2c6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IiL-de-Jci"/>
-                            <constraint firstItem="blm-Ae-smQ" firstAttribute="top" secondItem="jMu-ms-2c6" secondAttribute="bottom" id="cAD-b1-omj"/>
-                            <constraint firstItem="jMu-ms-2c6" firstAttribute="leading" secondItem="blm-Ae-smQ" secondAttribute="leading" id="dWJ-5p-7Jz"/>
-                            <constraint firstAttribute="trailing" secondItem="blm-Ae-smQ" secondAttribute="trailing" id="n0Z-r3-S4b"/>
-                            <constraint firstItem="jMu-ms-2c6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qIl-uM-R8U"/>
-                            <constraint firstAttribute="trailing" secondItem="jMu-ms-2c6" secondAttribute="trailing" id="rB6-TR-61x"/>
-                            <constraint firstItem="blm-Ae-smQ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xOE-le-1lY"/>
+                            <constraint firstItem="jMu-ms-2c6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="kIL-Pe-wQS"/>
+                            <constraint firstItem="jMu-ms-2c6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="qIl-uM-R8U"/>
+                            <constraint firstItem="jMu-ms-2c6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="rB6-TR-61x"/>
                         </constraints>
                     </view>
                     <connections>
