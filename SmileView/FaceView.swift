@@ -22,6 +22,18 @@ class FaceView: UIView {
     @IBInspectable
     var eyeBrowTilt: CGFloat = 0.0 { didSet { setNeedsDisplay() } }
 
+    func changeScale(recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .Changed:
+            scale *= recognizer.scale
+            recognizer.scale = 1.0
+        case .Ended:
+            scale *= recognizer.scale
+        default:
+            break
+        }
+    }
+
     private var skullRadius: CGFloat {
         return min(bounds.size.height, bounds.size.width) / 2 * scale
     }

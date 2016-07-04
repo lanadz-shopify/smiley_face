@@ -9,11 +9,52 @@
 import UIKit
 
 class SmileViewController: UIViewController {
+
+    @IBOutlet weak var faceView: FaceView! {
+        didSet {
+            faceView.addGestureRecognizer(
+                UIPinchGestureRecognizer(target: faceView, action: #selector(FaceView.changeScale(_:))
+                ))
+
+            let happierSwipeGestureRecognizer = UISwipeGestureRecognizer(
+                target: self,
+                action: #selector(SmileViewController.increaseHappiness)
+            )
+            happierSwipeGestureRecognizer.direction = .Up
+            faceView.addGestureRecognizer(happierSwipeGestureRecognizer)
+
+            let sadderSwipeGestureRecognizer = UISwipeGestureRecognizer(
+                target: self,
+                action: #selector(SmileViewController.decreaseHappiness)
+            )
+            sadderSwipeGestureRecognizer.direction = .Down
+            faceView.addGestureRecognizer(sadderSwipeGestureRecognizer)
+
+            updateUI()
+        }
+    }
+    @IBAction func toggleEyes(recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .Ended{
+            switch expression.eyes {
+            case .Open: expression.eyes = .Closed
+            case .Closed: expression.eyes = .Open
+            default: break
+            }
+        }
+    }
+
+
     var expression = FacialExpression(eyes: .Closed, brows: .Relaxed, mouth: .Neutral) {
         didSet { updateUI() }
     }
 
-    @IBOutlet weak var faceView: FaceView! { didSet { updateUI() } }
+    func increaseHappiness() {
+        expression.mouth = expression.mouth.happierMouth()
+    }
+
+    func decreaseHappiness() {
+        expression.mouth = expression.mouth.sadderMouth()
+    }
 
     private func updateUI() {
         switch expression.eyes {
