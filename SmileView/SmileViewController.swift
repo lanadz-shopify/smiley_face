@@ -57,14 +57,16 @@ class SmileViewController: UIViewController {
     }
 
     private func updateUI() {
-        switch expression.eyes {
-        case .Open: faceView.eyeOpen = true
-        case .Closed: faceView.eyeOpen = false
-        case .Squinting: faceView.eyeOpen = false
-        }
+        if faceView != nil {
+            switch expression.eyes {
+            case .Open: faceView.eyeOpen = true
+            case .Closed: faceView.eyeOpen = false
+            case .Squinting: faceView.eyeOpen = false
+            }
 
-        faceView.mouthCurvature = CGFloat(mouthCurvatures[expression.mouth] ?? 0.0 )
-        faceView.eyeBrowTilt = CGFloat(browTilts[expression.brows] ?? 0.5)
+            faceView.mouthCurvature = CGFloat(mouthCurvatures[expression.mouth] ?? 0.0 )
+            faceView.eyeBrowTilt = CGFloat(browTilts[expression.brows] ?? 0.5)
+        }
     }
 
     private let mouthCurvatures = [ FacialExpression.Mouth.Frown: -1.0, .Grin: 0.5, .Smile: 1, .Smirk: -0.5 ]

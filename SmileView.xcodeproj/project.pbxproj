@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F3B5D9BE1D23C56D0061023C /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5D9BD1D23C56D0061023C /* FacialExpression.swift */; };
+		F3B5D9C01D2CB4FF0061023C /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5D9BF1D2CB4FF0061023C /* EmotionsViewController.swift */; };
 		F3CE943B1D10DF05009013AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE943A1D10DF05009013AD /* AppDelegate.swift */; };
 		F3CE943D1D10DF05009013AD /* SmileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE943C1D10DF05009013AD /* SmileViewController.swift */; };
 		F3CE94401D10DF05009013AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CE943E1D10DF05009013AD /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		F3B5D9BD1D23C56D0061023C /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		F3B5D9BF1D2CB4FF0061023C /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 		F3CE94371D10DF05009013AD /* SmileView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE943A1D10DF05009013AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CE943C1D10DF05009013AD /* SmileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		F3CE94391D10DF05009013AD /* SmileView */ = {
 			isa = PBXGroup;
 			children = (
+				F3B5D9BF1D2CB4FF0061023C /* EmotionsViewController.swift */,
 				F3CE943A1D10DF05009013AD /* AppDelegate.swift */,
 				F3CE943C1D10DF05009013AD /* SmileViewController.swift */,
 				F3CE943E1D10DF05009013AD /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				F3CE943D1D10DF05009013AD /* SmileViewController.swift in Sources */,
 				F3B5D9BE1D23C56D0061023C /* FacialExpression.swift in Sources */,
+				F3B5D9C01D2CB4FF0061023C /* EmotionsViewController.swift in Sources */,
 				F3CE943B1D10DF05009013AD /* AppDelegate.swift in Sources */,
 				F3CE944D1D110762009013AD /* FaceView.swift in Sources */,
 			);
