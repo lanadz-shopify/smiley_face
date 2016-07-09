@@ -51,6 +51,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="yaa-gF-eom" appends="YES" id="6Ol-eR-pHd"/>
+                                    <outletCollection property="gestureRecognizers" destination="1F2-T9-kHN" appends="YES" id="eYV-Sb-tqe"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -73,6 +74,11 @@
                         <action selector="toggleEyes:" destination="BYZ-38-t0r" id="VWY-Ug-UPR"/>
                     </connections>
                 </tapGestureRecognizer>
+                <rotationGestureRecognizer id="1F2-T9-kHN">
+                    <connections>
+                        <action selector="moveBrows:" destination="BYZ-38-t0r" id="9Lt-kl-euY"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="334" y="1382"/>
         </scene>
@@ -88,8 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-8v-gVo">
-                                <rect key="frame" x="217" y="180" width="230" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-8v-gVo">
+                                <rect key="frame" x="185" y="150" width="230" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvS-cJ-aiZ">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="60"/>

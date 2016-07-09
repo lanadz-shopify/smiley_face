@@ -43,6 +43,15 @@ class SmileViewController: UIViewController {
         }
     }
 
+    @IBAction func moveBrows(recognizer: UIRotationGestureRecognizer) {
+        if recognizer.state == .Ended {
+            if recognizer.rotation < 0 {
+                expression.brows = expression.brows.moreRelaxedBrow()
+            } else {
+                expression.brows = expression.brows.moreFurrowedBrow()
+            }
+        }
+    }
 
     var expression = FacialExpression(eyes: .Closed, brows: .Relaxed, mouth: .Neutral) {
         didSet { updateUI() }
